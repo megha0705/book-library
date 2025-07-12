@@ -56,6 +56,18 @@ bash
 ```
 ./mvnw spring-boot:run
 ```
+## 📫 Postman Collection
+
+You can test all API endpoints using the provided Postman collection.
+
+✅ [Download the Postman Collection](book-library.postman_collection.json)
+
+**How to use it:**
+1. Download the `.json` file from the link above
+2. Open Postman → Import
+3. Choose the downloaded file
+4. All requests will appear in your Postman workspace
+   
 🧪 Sample Requests & Expected Responses
 
 ✅ Add a new book
