@@ -60,7 +60,7 @@ bash
 
 You can test all API endpoints using the provided Postman collection.
 
-✅ [Download the Postman Collection](book-library.postman_collection.json)
+✅ [Download the Postman Collection](book%20library.postman_collection.json)
 
 **How to use it:**
 1. Download the `.json` file from the link above
