@@ -33,10 +33,11 @@ public class BooksController {
         return ResponseEntity.ok("book deleted successfully");
     }
     @PutMapping("/update/{id}")
-    public ResponseEntity<String> updateAvailability(@PathVariable int id , @RequestParam Boolean availability ){
+    public ResponseEntity<String> updateAvailability(@PathVariable int id , @RequestParam String availability ){
     return  ResponseEntity.ok(bookService.updateAvailability(id , availability));
 
     }
+    @PostMapping("/add")
     public ResponseEntity<String> addBook(@RequestBody BookDto book){
         return ResponseEntity.ok(bookService.addBook(book));
 

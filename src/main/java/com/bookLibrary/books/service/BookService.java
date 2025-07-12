@@ -10,9 +10,14 @@ import org.springframework.stereotype.Service;
 public class BookService {
     @Autowired
     BookRepo bookRepo;
-    public String updateAvailability(int id, Boolean availability) {
+    public String updateAvailability(int id, String availability) {
         BooksEntity book = bookRepo.findById(id).orElseThrow(()-> new RuntimeException("book with this id not available"));
-        book.setAvailable(availability);
+        if ("true".equalsIgnoreCase(availability)) {
+            book.setAvailable(true);
+        } else if("false".equalsIgnoreCase(availability)){
+            book.setAvailable(false);
+        }
+        bookRepo.save(book);
         return "book availability updated succesfully";
     }
 
